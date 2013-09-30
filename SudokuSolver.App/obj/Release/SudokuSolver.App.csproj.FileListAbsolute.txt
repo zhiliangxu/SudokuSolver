@@ -1,0 +1,8 @@
+D:\code\SudokuSolver\SudokuSolver.App\obj\Release\SudokuSolver.App.csprojResolveAssemblyReference.cache
+D:\code\SudokuSolver\SudokuSolver.App\bin\Release\SudokuSolver.App.exe.config
+D:\code\SudokuSolver\SudokuSolver.App\bin\Release\SudokuSolver.App.exe
+D:\code\SudokuSolver\SudokuSolver.App\bin\Release\SudokuSolver.App.pdb
+D:\code\SudokuSolver\SudokuSolver.App\bin\Release\SudokuSolver.Lib.dll
+D:\code\SudokuSolver\SudokuSolver.App\bin\Release\SudokuSolver.Lib.pdb
+D:\code\SudokuSolver\SudokuSolver.App\obj\Release\SudokuSolver.App.exe
+D:\code\SudokuSolver\SudokuSolver.App\obj\Release\SudokuSolver.App.pdb
