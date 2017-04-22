@@ -18,3 +18,5 @@ artifacts:
 test_script:
  - ps: cd .\SudokuSolver.UnitTest
  - cmd: dotnet test
+ - ps: cd \SudokuSolver.App\bin\Debug\netcoreapp1.1
+ - cmd: dotnet exec SudokuSolver.App.dll
