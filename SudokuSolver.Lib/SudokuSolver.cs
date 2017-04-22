@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace SudokuSolver
@@ -300,20 +301,21 @@ namespace SudokuSolver
             return filledCells;
         }
 
-        public static void PrintSudokuGame(int[,] grid)
+        public static void PrintSudokuGame(int[,] grid, TextWriter writer)
         {
             int height = grid.GetLength(0);
             int width = grid.GetLength(1);
 
-            Console.WriteLine();
+            writer.WriteLine();
 
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(grid[i, j] + " ");
+                    writer.Write(grid[i, j] + " ");
                 }
-                Console.WriteLine();
+
+                writer.WriteLine();
             }
         }
     }
