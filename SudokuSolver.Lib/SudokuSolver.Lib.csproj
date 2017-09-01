@@ -2,6 +2,51 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageId>Sudoku.Solver.Lite</PackageId>
+    <Authors>Zhiliang Xu</Authors>
+    <Company>Sudoku.Solver.Lite</Company>
+    <Product>Sudoku.Solver.Lite</Product>
+    <Description>This is a portable and lightweight Sudoku solver implementation in C#. It supports .Net Standard 1.0.
+
+How to use 
+
+int[,] grid = 
+{ 
+   {0, 0, 0, 0, 0, 0, 0, 6, 7}, 
+   {0, 0, 0, 9, 0, 7, 4, 0, 3}, 
+   {0, 6, 0, 0, 0, 0, 1, 9, 0}, 
+   {1, 0, 0, 0, 7, 3, 0, 0, 0}, 
+   {0, 0, 0, 4, 0, 6, 0, 0, 0}, 
+   {0, 0, 0, 8, 1, 0, 0, 0, 4}, 
+   {0, 2, 1, 0, 0, 0, 0, 5, 0}, 
+   {8, 0, 7, 1, 0, 9, 0, 0, 0}, 
+   {3, 5, 0, 0, 0, 0, 0, 0, 0} 
+}; 
+
+bool solved = SudokuSolver.Solve(grid); 
+
+if (solved) 
+{ 
+   // Print out the solution 
+   for (int i = 0; i &lt; 9; i++) 
+   { 
+       for (int j = 0; j &lt; 9; j++) 
+       { 
+           Console.Write(grid[i, j] + " "); 
+       } 
+       Console.WriteLine(); 
+   } 
+} 
+else 
+{ 
+   Console.WriteLine("No solution"); 
+}</Description>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/zhiliangxu/SudokuSolver</PackageProjectUrl>
+    <PackageReleaseNotes>This is the first release to support Sudoku Solver functionality.</PackageReleaseNotes>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageTags>Sudoku Solver</PackageTags>
   </PropertyGroup>
 
 </Project>

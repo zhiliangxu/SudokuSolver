@@ -10,12 +10,12 @@ namespace SudokuSolver
         {
             if (grid == null)
             {
-                throw new ArgumentNullException("grids");
+                throw new ArgumentNullException(nameof(grid));
             }
 
             if (!IsValidSudokuGame(grid))
             {
-                throw new ArgumentException("Grids is not a valid Sudoku game.");
+                throw new ArgumentException("grid is not a valid Sudoku game.");
             }
 
             int pendingCells = grid.Cast<int>().Where(num => num == 0).Count();
@@ -27,7 +27,7 @@ namespace SudokuSolver
         {
             if (grid == null)
             {
-                throw new ArgumentNullException("grid");
+                throw new ArgumentNullException(nameof(grid));
             }
 
             int height = grid.GetLength(0);
