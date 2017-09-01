@@ -19,14 +19,14 @@ namespace SudokuSolver
                            };
 
             Console.WriteLine("Input:");
-            SudokuSolver.PrintSudokuGame(grid);
+            SudokuSolver.PrintSudokuGame(grid, Console.Out);
 
             bool solved = SudokuSolver.Solve(grid);
             Console.WriteLine();
             Console.WriteLine("Solved: {0}.", solved);
 
             Console.WriteLine("Solution:");
-            SudokuSolver.PrintSudokuGame(grid);
+            SudokuSolver.PrintSudokuGame(grid, Console.Out);
         }
     }
 }

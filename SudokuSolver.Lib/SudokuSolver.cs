@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace SudokuSolver
@@ -9,12 +10,12 @@ namespace SudokuSolver
         {
             if (grid == null)
             {
-                throw new ArgumentNullException("grids");
+                throw new ArgumentNullException(nameof(grid));
             }
 
             if (!IsValidSudokuGame(grid))
             {
-                throw new ArgumentException("Grids is not a valid Sudoku game.");
+                throw new ArgumentException("grid is not a valid Sudoku game.");
             }
 
             int pendingCells = grid.Cast<int>().Where(num => num == 0).Count();
@@ -26,7 +27,7 @@ namespace SudokuSolver
         {
             if (grid == null)
             {
-                throw new ArgumentNullException("grid");
+                throw new ArgumentNullException(nameof(grid));
             }
 
             int height = grid.GetLength(0);
@@ -160,16 +161,16 @@ namespace SudokuSolver
                     }
 
                     var possibleColumnIndexes = Enumerable.Range(0, width).Where(j =>
+                    {
+                        if (grid[i, j] != 0)
                         {
-                            if (grid[i, j] != 0)
-                            {
-                                return false;
-                            }
-                            grid[i, j] = num;
-                            bool isValidTest = CheckColumn(grid, j) && CheckSubArea(grid, i / 3, j / 3);
-                            grid[i, j] = 0;
-                            return isValidTest;
-                        }).Take(2).ToArray();
+                            return false;
+                        }
+                        grid[i, j] = num;
+                        bool isValidTest = CheckColumn(grid, j) && CheckSubArea(grid, i / 3, j / 3);
+                        grid[i, j] = 0;
+                        return isValidTest;
+                    }).Take(2).ToArray();
 
                     if (possibleColumnIndexes.Length == 1)
                     {
@@ -242,16 +243,16 @@ namespace SudokuSolver
                         var possibleColumnIndexes = Enumerable.Range(0, 3).SelectMany(si =>
                             Enumerable.Range(0, 3).Select(sj => Position.Create(ai * 3 + si, aj * 3 + sj)))
                             .Where(p =>
+                            {
+                                if (grid[p.i, p.j] != 0)
                                 {
-                                    if (grid[p.i, p.j] != 0)
-                                    {
-                                        return false;
-                                    }
-                                    grid[p.i, p.j] = num;
-                                    bool isValidTest = CheckRow(grid, p.i) && CheckColumn(grid, p.j);
-                                    grid[p.i, p.j] = 0;
-                                    return isValidTest;
-                                }).Take(2).ToArray();
+                                    return false;
+                                }
+                                grid[p.i, p.j] = num;
+                                bool isValidTest = CheckRow(grid, p.i) && CheckColumn(grid, p.j);
+                                grid[p.i, p.j] = 0;
+                                return isValidTest;
+                            }).Take(2).ToArray();
 
                         if (possibleColumnIndexes.Length == 1)
                         {
@@ -283,10 +284,10 @@ namespace SudokuSolver
                     }
 
                     var possibleNumber = Enumerable.Range(1, 9).Where(num =>
-                        {
-                            grid[i, j] = num;
-                            return CheckColumn(grid, j) && CheckRow(grid, i) && CheckSubArea(grid, i / 3, j / 3);
-                        }).Take(2).ToArray();
+                    {
+                        grid[i, j] = num;
+                        return CheckColumn(grid, j) && CheckRow(grid, i) && CheckSubArea(grid, i / 3, j / 3);
+                    }).Take(2).ToArray();
                     grid[i, j] = 0;
 
                     if (possibleNumber.Length == 1)
@@ -300,20 +301,21 @@ namespace SudokuSolver
             return filledCells;
         }
 
-        public static void PrintSudokuGame(int[,] grid)
+        public static void PrintSudokuGame(int[,] grid, TextWriter writer)
         {
             int height = grid.GetLength(0);
             int width = grid.GetLength(1);
 
-            Console.WriteLine();
+            writer.WriteLine();
 
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(grid[i, j] + " ");
+                    writer.Write(grid[i, j] + " ");
                 }
-                Console.WriteLine();
+
+                writer.WriteLine();
             }
         }
     }

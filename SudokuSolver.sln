@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.Lib", "SudokuSolver.Lib\SudokuSolver.Lib.csproj", "{50D0AF39-A228-4BEC-9C6A-425C16A0F139}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.Lib", "SudokuSolver.Lib\SudokuSolver.Lib.csproj", "{5F5E310D-5524-4A40-B8FD-1E39200C94E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.UnitTest", "SudokuSolver.UnitTest\SudokuSolver.UnitTest.csproj", "{1A0E3D6A-D8D4-4570-A1FC-FD641E73669E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.App", "SudokuSolver.App\SudokuSolver.App.csproj", "{FFEBE502-99E8-4F27-984B-46B47704F0F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.App", "SudokuSolver.App\SudokuSolver.App.csproj", "{15730CBD-3139-4E1E-A2B6-7E6EB040C53C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SudokuSolver.UnitTest", "SudokuSolver.UnitTest\SudokuSolver.UnitTest.csproj", "{7A9E4FE9-8A70-404B-9855-670E070F11D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{50D0AF39-A228-4BEC-9C6A-425C16A0F139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50D0AF39-A228-4BEC-9C6A-425C16A0F139}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50D0AF39-A228-4BEC-9C6A-425C16A0F139}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50D0AF39-A228-4BEC-9C6A-425C16A0F139}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A0E3D6A-D8D4-4570-A1FC-FD641E73669E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A0E3D6A-D8D4-4570-A1FC-FD641E73669E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A0E3D6A-D8D4-4570-A1FC-FD641E73669E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A0E3D6A-D8D4-4570-A1FC-FD641E73669E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15730CBD-3139-4E1E-A2B6-7E6EB040C53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15730CBD-3139-4E1E-A2B6-7E6EB040C53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15730CBD-3139-4E1E-A2B6-7E6EB040C53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15730CBD-3139-4E1E-A2B6-7E6EB040C53C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5E310D-5524-4A40-B8FD-1E39200C94E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5E310D-5524-4A40-B8FD-1E39200C94E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5E310D-5524-4A40-B8FD-1E39200C94E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5E310D-5524-4A40-B8FD-1E39200C94E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEBE502-99E8-4F27-984B-46B47704F0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEBE502-99E8-4F27-984B-46B47704F0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEBE502-99E8-4F27-984B-46B47704F0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEBE502-99E8-4F27-984B-46B47704F0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9E4FE9-8A70-404B-9855-670E070F11D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9E4FE9-8A70-404B-9855-670E070F11D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9E4FE9-8A70-404B-9855-670E070F11D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9E4FE9-8A70-404B-9855-670E070F11D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

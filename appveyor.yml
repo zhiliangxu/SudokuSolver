@@ -1,0 +1,22 @@
+version: 1.1.0.{build}.{branch}
+
+init:
+  - git config --global core.autocrlf true
+
+before_build:
+ - cmd: dotnet restore SudokuSolver.sln
+
+build_script:
+ - cmd: dotnet build -c Release
+ - cmd: dotnet publish SudokuSolver.App
+
+artifacts:
+ - path: 'SudokuSolver.App\bin\Release\netcoreapp1.1'
+   name: App
+   type: ConsoleApp
+
+test_script:
+ - ps: cd .\SudokuSolver.UnitTest
+ - cmd: dotnet test
+ - ps: cd ..\SudokuSolver.App
+ - cmd: dotnet exec bin\Release\netcoreapp1.1\SudokuSolver.App.dll
