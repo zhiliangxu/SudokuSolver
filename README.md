@@ -1,5 +1,7 @@
 # Sudoku Solver Library
 
+A fast and lightweight Sudoku solver library written in C#, targeting netstandard 1.0.
+
 [![Build status](https://ci.appveyor.com/api/projects/status/m65jp2kckfuk5d20?svg=true)](https://ci.appveyor.com/project/zhiliangxu/sudokusolver)
 
 # How to Use
